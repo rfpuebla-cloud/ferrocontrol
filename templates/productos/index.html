@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Productos
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow">
+
+    <div class="card-header bg-primary text-white">
+
+        <h4>Módulo Productos</h4>
+
+    </div>
+
+    <div class="card-body">
+
+        <h5>Inventario de productos</h5>
+
+        <table class="table table-bordered table-hover mt-3">
+
+            <thead class="table-primary">
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Stock</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>1</td>
+                    <td>Martillo</td>
+                    <td>25</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
