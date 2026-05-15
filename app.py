@@ -1,17 +1,22 @@
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
 
-app = Flask(__name__)
+from controllers.usuario_controller import usuario_bp
+from controllers.producto_controller import producto_bp
+from controllers.reporte_controller import reporte_bp
 
-# Configuración para conectar con Laragon (ajusta 'ferrocontrol_db' al nombre de tu BD)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/ferrocontrol_db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app = Flask(_name_)
 
-db = SQLAlchemy(app)
+# Registrar Blueprints
+app.register_blueprint(usuario_bp)
+app.register_blueprint(producto_bp)
+app.register_blueprint(reporte_bp)
 
 @app.route('/')
-def index():
-    return "<h1>Sistema Ferrocontrol</h1><p>El servidor Flask está funcionando correctamente.</p>"
+def home():
+    return """
+    <h1>FERROCONTROL</h1>
+    <p>Sistema funcionando correctamente</p>
+    """
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(debug=True)
