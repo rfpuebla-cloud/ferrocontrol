@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ventas
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow">
+
+    <div class="card-header bg-danger text-white">
+
+        <h4>Módulo de Ventas</h4>
+
+    </div>
+
+    <div class="card-body">
+
+        <h5>Registro de ventas</h5>
+
+        <table class="table table-bordered table-hover mt-3">
+
+            <thead class="table-danger">
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Producto</th>
+                    <th>Total</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>1</td>
+                    <td>Juan Pérez</td>
+                    <td>Martillo</td>
+                    <td>$25.00</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
